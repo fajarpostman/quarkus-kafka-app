@@ -17,7 +17,7 @@ public class KafkaConsumerHandler {
         String[] parts = message.split(",");
         if (parts.length != 2) return;
 
-        String name = parts[0].trim();
+        String name = parts[0].trim().toUpperCase();
         int age = Integer.parseInt(parts[1].trim());
 
         UserData user = new UserData(name, age);
